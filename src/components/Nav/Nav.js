@@ -5,7 +5,7 @@ export default function Nav (props) {
     return (
         <div className="nav">
             <Link to="/">
-                <div>iStocks</div>
+                <div>Home</div>
             </Link>
             <Link to="/stocks">
                 <div>Stocks</div>
