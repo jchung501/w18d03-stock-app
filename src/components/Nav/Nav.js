@@ -10,6 +10,9 @@ export default function Nav (props) {
             <Link to="/stocks">
                 <div>Stocks</div>
             </Link>
+            <Link to="/about">
+                <div>About</div>
+            </Link>
         </div>
-    )
-}
+    );
+};
