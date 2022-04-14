@@ -1,11 +1,11 @@
 import React from 'react';
+import stockData from '../stock-data'
 
 export default function Stock (props) {
-    const stock = props.stockData.filter( d => d.symbol === props.match.params.symbol)[0]
   return (
     <div>
-      <h3>Name: {stock.name}</h3>
-      <h3 className="price">Price: {stock.lastPrice}</h3>
+      <h3>Name: {stockData.name}</h3>
+      <h3 className="price">Price: {stockData.lastPrice}</h3>
     </div>
   )
 }
