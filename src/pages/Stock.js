@@ -1,11 +1,16 @@
 import React from 'react';
-import stockData from '../stock-data'
+import { useParams } from 'react-router';
 
 export default function Stock (props) {
+    const params = useParams();
+    const symbol = params.symbol
+
+    const stock = props.stockData.filter((d => d.symbol === symbol))
+
   return (
     <div>
-      <h3>Name: {stockData.name}</h3>
-      <h3 className="price">Price: {stockData.lastPrice}</h3>
+      <h1>Name: {stock[0].name}</h1>
+      <h1>Price: {stock[0].lastPrice}</h1>
     </div>
   )
 }

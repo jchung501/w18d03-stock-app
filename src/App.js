@@ -3,7 +3,7 @@ import Nav from './components/Nav/Nav';
 import Main from './pages/Main';
 import stockData from './stock-data'
 
-export default function App() {
+export default function App(props) {
   return (
     <main>
       <div className="App">
