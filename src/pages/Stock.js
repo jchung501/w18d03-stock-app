@@ -1,18 +1,12 @@
-import { Link } from "react-router-dom";
-import stockData from "../stock-data"
+import React from 'react';
 
 export default function Stock (props) {
-    return (
-        <div className="stocks">
-            {
-                stockData.map((stock) => {
-                    const { name, symbol, lastPrice, change, high, low, open } = stock;
-                    return (<Link to={`/stocks/${symbol}`}>
-                        <h2>{name}</h2>
-                    </Link>)
-                })
-            }
-        </div>
-    )
+    const stock = props.stockData.filter( d => d.symbol === props.match.params.symbol)[0]
+  return (
+    <div>
+      <h3>Name: {stock.name}</h3>
+      <h3 className="price">Price: {stock.lastPrice}</h3>
+    </div>
+  )
 }
 
